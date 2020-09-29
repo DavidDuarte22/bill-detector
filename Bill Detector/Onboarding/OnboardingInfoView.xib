@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="iN0-l3-epB" customClass="OnboardingInfoView" customModule="Bill_Detector" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-BG-its">
+                    <rect key="frame" x="20" y="299" width="627" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9E-uJ-nfN">
+                    <rect key="frame" x="0.0" y="-25" width="667" height="332"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="667" id="AGV-m1-8WN"/>
+                        <constraint firstAttribute="height" constant="332" id="GdN-Hj-MiB"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pd-oN-wWq">
+                    <rect key="frame" x="281" y="273" width="111" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="launchButton"/>
+                    <connections>
+                        <action selector="onboardingOnTouch:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Ji-HV-jmj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t9E-uJ-nfN" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" constant="0.5" id="D3S-Nt-k0Z"/>
+                <constraint firstItem="t9E-uJ-nfN" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="dld-qS-flc"/>
+                <constraint firstItem="t9E-uJ-nfN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fJF-xn-rod"/>
+                <constraint firstItem="t9E-uJ-nfN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-25" id="nTn-8I-Z0Z"/>
+                <constraint firstItem="t9E-uJ-nfN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-25" id="qlM-WM-QmY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="onboardingButton" destination="4Pd-oN-wWq" id="ra1-eH-tTc"/>
+                <outlet property="onboardingTitle" destination="iyh-BG-its" id="ZZd-Kg-Oni"/>
+                <outlet property="onboardingView" destination="t9E-uJ-nfN" id="1OD-fE-H1M"/>
+            </connections>
+            <point key="canvasLocation" x="121.5" y="93.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="launchButton" width="297" height="125"/>
+    </resources>
+</document>
